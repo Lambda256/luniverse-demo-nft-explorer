@@ -2,7 +2,10 @@ import { atom } from "recoil";
 import { KEYS } from "@/constants";
 import { recoilPersist } from "recoil-persist";
 
-const { persistAtom } = recoilPersist();
+const { persistAtom } = recoilPersist({
+	key: "sessionStorage",
+	storage: sessionStorage,
+});
 
 // account to search owned NFT list
 export const searchAccountState = atom({
