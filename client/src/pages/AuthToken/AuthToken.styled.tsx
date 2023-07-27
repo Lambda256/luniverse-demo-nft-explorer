@@ -34,4 +34,13 @@ export const TextBody = styled.span`
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	height: 1.4rem;
+	line-height: 1.2rem;
+`;
+
+export const ErrorText = styled.h1`
+	text-align: center;
+	font-size: inherit;
+	font-weight: ${({ theme }) => theme.fontWeight.bold};
+	color: ${({ theme }) => theme.color.error};
 `;

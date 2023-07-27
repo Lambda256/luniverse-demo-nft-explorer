@@ -8,11 +8,16 @@ import {
 	BtnBox,
 } from "./Error.styled";
 
-const Error: React.FC<ErrorComponent.Props> = ({ error, onClick }) => {
+interface ErrorProps {
+	error: any;
+	onClick?: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+const Error: React.FC<ErrorProps> = ({ error, onClick }) => {
 	// Handle on click Exit button
-	const handleOnClick = () => {
+	const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		if (!onClick) window.location.reload();
-		else onClick();
+		else onClick(e);
 	};
 
 	return (

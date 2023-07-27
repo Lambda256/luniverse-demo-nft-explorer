@@ -39,12 +39,13 @@ export const Input = styled.input`
 	transition: ${Duration};
 	border-radius: 0;
 
-	&:focus {
-		outline: none;
+	&:valid {
+		border-color: ${({ theme }) => theme.color.success};
 	}
 
-	&:valid {
-		border-color: ${({ theme }) => theme.color.dark};
+	&:focus {
+		outline: none;
+		border-color: ${({ theme }) => theme.color.primary};
 	}
 
 	&:focus + label,
